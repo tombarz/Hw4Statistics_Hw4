@@ -13,11 +13,14 @@ def Q3_d():
     print(norm.cdf((82-81.5)/(13/5),loc=0,scale=1)-norm.cdf((80-81.5)/(13/5),loc=0,scale=1))
 def Q3_e():
    print(norm.ppf(0.9,loc=81.5,scale=13))
-
+def Q3_f():
+    sigma = 20 / (norm.ppf(0.7, loc=0, scale=1) - norm.ppf(0.2, loc=0, scale=1))
+    E = 70 - sigma * norm.ppf(0.2, loc=0, scale=1)
+    print("std")
 if __name__ == '__main__':
     Q3_a()
     Q3_b()
     Q3_c()
     Q3_d()
     Q3_e()
-    print(20/(norm.ppf(0.7,loc=0,scale=1) - norm.ppf(0.2, loc = 0, scale = 1)))
+    Q3_f()
